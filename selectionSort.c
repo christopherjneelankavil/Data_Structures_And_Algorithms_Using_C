@@ -27,12 +27,15 @@ int main(){
     return 0;
 }
 
+//function to print the array
 void printArray(int arr[],int size){
     for(int i=0;i<size;i++){
         printf("%d ",arr[i]);
     }
     printf("\n");
 }
+
+//function for selection sort
 void selectionSort(int arr[],int size){
     for(int i=0;i<=size-2;i++){
         for(int j=i+1;j<=size-1;j++){
