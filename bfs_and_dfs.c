@@ -87,3 +87,44 @@ int main(){
 	printf("\nBFS\n");
 	BFS(source);
 }
+
+
+Algorithm
+
+Step 1: Start
+
+Step 2: Read the number of vertices (V) and initialize variables: E, visited[20], G[20][20], Q[20], front, rear
+
+Step 3: Initialize the adjacency matrix G with zeros (G[i][j] = 0)
+
+Step 4: Read the number of edges (E)
+
+Step 5: Loop for each edge i from 1 to E
+        a. Read edges v1 and v2
+        b. Set G[v1][v2] = 1 and G[v2][v1] = 1 (since it's an undirected graph)
+
+Step 6: Print the adjacency matrix G
+
+Step 7: Initialize visited array with zeros
+
+Step 8: Read the source vertex (source)
+
+Step 9: Call DFS function with the source vertex
+        a. Inside DFS function:
+            i. Mark the current vertex as visited
+            ii. Print the current vertex
+            iii. Loop for each adjacent vertex j
+                - If G[i][j] is 1 and visited[j] is 0, recursively call DFS(j)
+
+Step 10: Reset visited array to zeros
+
+Step 11: Print "BFS" and call BFS function with the source vertex
+        a. Inside BFS function:
+            i. Mark the source vertex as visited, print it, and enqueue it
+            ii. While the queue is not empty
+                - Dequeue a vertex (s)
+                - Loop for each adjacent vertex i
+                    - If G[s][i] is 1 and visited[i] is 0
+                        - Mark i as visited, print it, and enqueue it
+
+Step 12: End
