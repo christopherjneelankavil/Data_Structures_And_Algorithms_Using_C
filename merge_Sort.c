@@ -68,12 +68,12 @@ void merge(int arr[],int low,int mid,int high){
         }
         i++;
     }
-    if(x<=mid){
+    while(x<=mid){
         b[i]=arr[x];
         x++;
         i++;
     }
-    else{
+    while(y<=high){
         b[i]=arr[y];
         y++;
         i++;
